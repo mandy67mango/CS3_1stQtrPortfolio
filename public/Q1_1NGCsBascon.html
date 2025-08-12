@@ -3,17 +3,18 @@
         body {background-color: lemonchiffon;}
     </style>
 <body>
-    <p> My name is Mandalay Gonzaga Bascon. </p>
+
     <script>
-        //let, var, const
-        // declare variables
-        let age = 14;
-        let maxAge = 6767;
-        let numPerDay = 6;
-        // determine how many snacks needed until 6767
-        let  totalRequired = (numPerDay * 365) * (maxAge - age);
+        function myFunction()
+        var age= prompt("Enter your age", "14")
+        if (confirm("Until maxAge of 6767!")) 
+    {txt: "You will proceed!";} else {txt="Try again please!";}
+        var maxAge = 6767;
+        var numPerDay = prompt("Enter how many per day", "6");
+        var  totalRequired = (parseInt(maxAge) * 365) * (parseInt(maxAge) - parseInt(age);
         // display on browser
         document.write("You will need " + totalRequired + " to last you until the ripe old age of " + maxAge);
+        alert(totalRequired); // Prints:2
     </script>
 </body>
 </html>
