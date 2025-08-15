@@ -6,12 +6,12 @@
 
     <script>
         function myFunction()
-        var age= prompt("Enter your age", "14")
+        let age= window.prompt("Enter your age :", "14")
         if (confirm("Until maxAge of 6767!")) 
     {txt: "You will proceed!";} else {txt="Try again please!";}
-        var maxAge = 6767;
-        var numPerDay = prompt("Enter how many per day", "6");
-        var  totalRequired = (parseInt(maxAge) * 365) * (parseInt(maxAge) - parseInt(age);
+       let maxAge = 6767;
+       let numPerDay = prompt("Enter how many per day", "6");
+       let  totalRequired = (parseInt(maxAge) * 365) * (parseInt(maxAge) - parseInt(age);
         // display on browser
         document.write("You will need " + totalRequired + " to last you until the ripe old age of " + maxAge);
         alert(totalRequired); // Prints:2

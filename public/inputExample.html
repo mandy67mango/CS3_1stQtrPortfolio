@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Give your pronouns</h2>
+    <label>What is your pronouns?
+        <input id="pronoun" />
+    </label>
+    <button onclick="checkPronoun()"> Show Pronoun </button> </p>
+        <p>Result: <span id="pronoun"></span></p>
+        <script>
+            function checkPronoun() {
+                let dPronoun = document.getElementById("pronoun").value
+                document.getElementById("pronoun").innerHTML=`<p><b>${dPronoun}</b></p>`;
+
+                //let dPronoun=document.getElementById("pronoun").value
+                //docment.getElementById("pronoun").innerHTML=`<p><b>${dPronoun}
+            }
+        </script>
+</body>
+</html>
