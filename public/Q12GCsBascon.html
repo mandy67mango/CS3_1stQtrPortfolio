@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html>
-<body>
+    <body>
+        <body style="background-color:whitesmoke;">
+        <h2> Q1 2nd Graded Exercise submitted by Mandalay Bascon of 9Cesium </h2>
+        </body>
 
-    <h2> Q1 3rd Graded Exercise submitted by Mandalay Bascon of 9Cesium</h2>
-    <label>Meal Price:
-        <input id="mp" />
-    </label><br/>
-    <label>Tip:
-        <input id="tip" />
-    </label><br/>
-    <label>Service Charge:
-        <input id="sc" />
-    </label><br/>
-    <button onclick="totalCost()"> Show Total Meal </button> </p>
-    <p>Total Meal: <span id="totalCost"></span></p>
-    <script>
-        function totalCost() {
-            let dTotalCost = mp + tip + (%sc / 100 * mp)
-            totalCost.innerHTML
-              // place your JS code here
-            
-         
-        }
-    </script>
+        <p>Meal Price: <input type="text" id="mealPrice" value="167.67"></p>
+        <p>Tip: <input type="text" id="tip" value="21"></p>
+        <p>Service Charge (%): <input type="text" id="serviceCharge" value="13"></p>
 
-</body>
+        <button onclick="totalMeal()">Accept Input</button>
+        <p id="result">Total Meal: </p>
+
+        <script>
+            function totalMeal() {
+                // get values from input
+                let mp = parseFloat(document.getElementById("mealPrice").value);
+                let tip = parseFloat(document.getElementById("tip").value);
+                let sc = parseFloat(document.getElementById("serviceCharge").value);
+                // if any field is empty or NaN,stop
+                if (isNaN(mp) || isNaN(tip) || isNaN(sc)) {
+                    document.getElementById("result").innerHTML="Total Meal: Please enter all values.";
+                    return;
+                } 
+                // compute
+                let totalCost = mp + tip + (sc / 100 * mp);
+                // display
+                document.getElementById("result").innerHTML = "Total Meal: " + totalCost.toFixed(2);
+            }
+        </script>
+    </body>
 </html>
