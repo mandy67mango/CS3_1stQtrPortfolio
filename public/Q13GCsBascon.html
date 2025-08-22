@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body style="background-image: url('lololyum.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+   <h2> Q1 3rd Graded Exercise submitted by Mandalay Bascon of 9Cesium</h2>
+   <!-- Enter your HTML tags below  but before the opening script tag -->
+    <p>Guess the number: ****</p>
+    <p>The number is from 1 to 100</p>
+
+    Enter ur guess: <input type="text" id="myGuess">
+    <input type="button" value="Check it" onclick="checkIt()">
+
+    <p>Result: <span id="result"></span></span></p>
+
+    <script>
+
+       var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1  to 100 when the page loads
+
+        function checkIt() {
+            var userNum = document.getElementById("myGuess").value;
+            if (userNum < dNumber) { document.getElementById("result").innerHTML = "Higher :C";
+            }
+            else if (userNum > dNumber) { document.getElementById("result").innerHTML = "Lower :C";
+            }
+            else if (userNum == dNumber) { document.getElementById("result").innerHTML = "Yumyum is correct !! :DD"
+            }
+            else { document.getElementById("result").innerHTML = "Invalid !!";
+            }
+            
+         
+        }
+    </script>
+
+</body>
+</html>
